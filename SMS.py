@@ -8,7 +8,6 @@ def connection():
         print("cannot connect to the database")
     return conn    
 
-
 def verifier():
     a=b=c=d=e=f=0
     if not student_name.get():
@@ -34,7 +33,6 @@ def verifier():
     else:
         return 0
 
-
 def add_student():
             ret=verifier()
             if ret==0:
@@ -45,7 +43,6 @@ def add_student():
                 conn.commit()
                 conn.close()
                 t1.insert(END,"ADDED SUCCESSFULLY\n")
-
 
 def view_student():
     conn=connection()
@@ -77,10 +74,8 @@ def update_student():
         conn.close()
         t1.insert(END,"UPDATED SUCCESSFULLY\n")
 
-
 def clse():
     sys.exit() 
-
 
 if __name__=="__main__":
     root=Tk()
@@ -131,9 +126,8 @@ if __name__=="__main__":
     
     t1=Text(root,width=80,height=20)
     t1.grid(row=10,column=1)
-   
 
-
+    
     b1=Button(root,text="ADD STUDENT",command=add_student,width=40)
     b1.grid(row=11,column=0)
 
@@ -148,6 +142,5 @@ if __name__=="__main__":
 
     b5=Button(root,text="CLOSE",command=clse,width=40)
     b5.grid(row=15,column=0)
-
 
     root.mainloop()
